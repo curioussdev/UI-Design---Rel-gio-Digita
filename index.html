@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Relógio UI Design</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <div id="clock">
+        <h2>QUE HORAS SÃO?</h2>
+        <div id="time">
+            <div><span id="hour">00</span><span>Horas</span></div>
+            <div><span id="hour">00</span><span>Minutos</span></div>
+            <div><span id="hour">00</span><span>Segundos</span></div>
+        </div>
+    </div>
+    <script >
+        function clock() {
+
+var hours = document.getElementById('hour');
+var minutes = document.getElementById('minutes');
+var seconds = document.getElementById('seconds');
+
+var h = new Date().getHours();
+var m = new Date().getMinutes();
+var s = new Date().getSeconds();
+
+hours.innerHTML = h;
+minutes.innerHTML = m;
+seconds.innerHTML = s;
+}
+        var interval = setInterval(clock, 1000);
+    </script>
+</body>
+</html>
